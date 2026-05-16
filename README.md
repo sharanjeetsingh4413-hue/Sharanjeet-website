@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio Website — Deployment Guide
 
 This repository contains a static portfolio website. Below are simple options to deploy the site and obtain a public link you can share with clients.
@@ -66,3 +67,7 @@ If you want, I can:
 - Deploy to Vercel using the CLI if you provide access to your Vercel account.
 
 Tell me which deployment option you prefer and whether you want me to perform the push (I will need a remote URL or access). If you'd rather do it yourself, I can guide you step-by-step while you run the commands.
+=======
+# Sharanjeet-website
+Professional Website Development &amp; Digital Solutions
+>>>>>>> b260339c5e80974b96357ca30f0935e41ce1d010
