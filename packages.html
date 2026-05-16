@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Packages & Pricing — Sharanjeet Singh</title>
+  <meta name="description" content="Choose a package and pay securely online. AI videos, websites, and content creation." />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    .price-tag {
+      font-size: 2.2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-purple-light), var(--accent-cyan-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .price-note {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-bottom: 1.25rem;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    .feature-list li::before {
+      content: '✓';
+      color: var(--accent-cyan);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .popular-badge {
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 1rem;
+      border-radius: 0 0 8px 8px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    .pay-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 0.85rem 1.5rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: auto;
+    }
+    .pay-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .pricing-card {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      position: relative;
+    }
+    .custom-section {
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .secure-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.svg" alt="Sharanjeet Singh" class="site-logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://wa.me/919811006425" target="_blank" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <span class="section-tag">Transparent Pricing</span>
+    <h1>Simple <span class="gradient-text">Packages</span></h1>
+    <p>Pick a package, pay securely online, and I'll get started right away</p>
+  </div>
+
+  <!-- PRICING -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="pricing-grid">
+
+        <!-- Package 1: Reel Edit -->
+        <div class="card pricing-card fade-up">
+          <span class="card-icon">✂️</span>
+          <h3>Reel / Short Edit</h3>
+          <div class="price-tag">₹999</div>
+          <div class="price-note">One-time payment</div>
+          <ul class="feature-list">
+            <li>Up to 60 sec video</li>
+            <li>Cuts & transitions</li>
+            <li>AI captions included</li>
+            <li>Background music</li>
+            <li>2 revisions</li>
+            <li>Delivery in 2 days</li>
+          </ul>
+          <button class="pay-btn" onclick="openRazorpay('Reel / Short Edit', 99900)">
+            Pay ₹999 →
+          </button>
+        </div>
+
+        <!-- Package 2: AI Video (Popular) -->
+        <div class="card pricing-card fade-up" style="border-color: var(--accent-purple);">
+          <span class="popular-badge">⭐ Most Popular</span>
+          <span class="card-icon">🤖</span>
+          <h3>AI Video Production</h3>
+          <div class="price-tag">₹8,000</div>
+          <div class="price-note">One-time payment</div>
+          <ul class="feature-list">
+            <li>Full AI-generated video</li>
+            <li>AI voiceover & script</li>
+            <li>AI visuals & B-roll</li>
+            <li>Captions & subtitles</li>
+            <li>Thumbnail included</li>
+            <li>WhatsApp delivery</li>
+            <li>2 revisions</li>
+            <li>Delivery in 3-4 days</li>
+          </ul>
+          <button class="pay-btn" onclick="openRazorpay('AI Video Production', 800000)">
+            Pay ₹8,000 →
+          </button>
+        </div>
+
+        <!-- Package 3: Landing Page -->
+        <div class="card pricing-card fade-up">
+          <span class="card-icon">🌐</span>
+          <h3>Landing Page</h3>
+          <div class="price-tag">₹4,999</div>
+          <div class="price-note">One-time payment</div>
+          <ul class="feature-list">
+            <li>Custom design</li>
+            <li>Mobile responsive</li>
+            <li>WhatsApp CTA button</li>
+            <li>Fast loading</li>
+            <li>SEO-ready</li>
+            <li>2 revisions</li>
+            <li>Delivery in 5-7 days</li>
+          </ul>
+          <button class="pay-btn" onclick="openRazorpay('Landing Page', 499900)">
+            Pay ₹4,999 →
+          </button>
+        </div>
+
+        <!-- Package 4: AI Content Monthly -->
+        <div class="card pricing-card fade-up">
+          <span class="card-icon">✨</span>
+          <h3>AI Content Pack</h3>
+          <div class="price-tag">₹7,999</div>
+          <div class="price-note">Per month</div>
+          <ul class="feature-list">
+            <li>4 AI videos / month</li>
+            <li>8 social media posts</li>
+            <li>Scripts & captions</li>
+            <li>4 thumbnails</li>
+            <li>Content calendar</li>
+            <li>Unlimited revisions</li>
+          </ul>
+          <button class="pay-btn" onclick="openRazorpay('AI Content Pack (Monthly)', 799900)">
+            Pay ₹7,999 →
+          </button>
+        </div>
+
+        <!-- Package 5: Full Website -->
+        <div class="card pricing-card fade-up">
+          <span class="card-icon">💻</span>
+          <h3>Full Business Website</h3>
+          <div class="price-tag">₹12,999</div>
+          <div class="price-note">One-time payment</div>
+          <ul class="feature-list">
+            <li>Up to 5 pages</li>
+            <li>Custom dark/light design</li>
+            <li>Contact form</li>
+            <li>Mobile responsive</li>
+            <li>SEO optimized</li>
+            <li>3 revisions</li>
+            <li>Delivery in 7-10 days</li>
+          </ul>
+          <button class="pay-btn" onclick="openRazorpay('Full Business Website', 1299900)">
+            Pay ₹12,999 →
+          </button>
+        </div>
+
+        <!-- Package 6: Bundle -->
+        <div class="card pricing-card fade-up" style="border-color: var(--accent-cyan);">
+          <span class="card-icon">⚡</span>
+          <h3>Video + Website Bundle</h3>
+          <div class="price-tag">₹9,999</div>
+          <div class="price-note">Save ₹3,500 vs. buying separately</div>
+          <ul class="feature-list">
+            <li>2 AI-generated videos</li>
+            <li>1 Landing page</li>
+            <li>Thumbnails included</li>
+            <li>Captions & subtitles</li>
+            <li>WhatsApp CTA</li>
+            <li>3 revisions on each</li>
+          </ul>
+          <button class="pay-btn" onclick="openRazorpay('Video + Website Bundle', 999900)">
+            Pay ₹9,999 →
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Custom Project -->
+      <div class="custom-section fade-up">
+        <div class="card" style="max-width:600px; margin:0 auto; padding:2.5rem; text-align:center; border-color:var(--border-accent);">
+          <span class="card-icon">🎯</span>
+          <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">Need something custom?</h3>
+          <p style="color:var(--text-secondary); margin-bottom:1.5rem;">Have a unique project? Let's talk about it and I'll give you a custom quote.</p>
+          <a href="https://wa.me/919811006425?text=Hi%2C%20I%20need%20a%20custom%20quote%20for%20my%20project" target="_blank" class="btn btn-whatsapp">
+            💬 Get Custom Quote
+          </a>
+        </div>
+      </div>
+
+      <p class="secure-note">
+        🔒 Payments powered by Razorpay — UPI, Cards, Net Banking, Wallets accepted
+      </p>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">Sharanjeet Singh.</span>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="refund.html">Refund Policy</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 Sharanjeet Singh. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // ⚠️ REPLACE "YOUR_RAZORPAY_KEY_ID" with your actual Key ID from Razorpay Dashboard
+    var RAZORPAY_KEY = "rzp_test_SoRGNmzmpNs5Ev";
+
+    function openRazorpay(serviceName, amountInPaise) {
+      var options = {
+        key: RAZORPAY_KEY,
+        amount: amountInPaise,
+        currency: "INR",
+        name: "Sharanjeet Singh",
+        description: serviceName,
+        image: "",
+        handler: function(response) {
+          alert("Payment successful! 🎉\nPayment ID: " + response.razorpay_payment_id + "\n\nI'll contact you on WhatsApp to get started.");
+          window.open("https://wa.me/919811006425?text=Hi%2C%20I%20just%20paid%20for%20" + encodeURIComponent(serviceName) + "%20(Payment%20ID%3A%20" + response.razorpay_payment_id + ")", "_blank");
+        },
+        prefill: {
+          name: "",
+          email: "",
+          contact: ""
+        },
+        notes: {
+          service: serviceName
+        },
+        theme: {
+          color: "#7c3aed"
+        },
+        modal: {
+          ondismiss: function() {}
+        }
+      };
+      var rzp = new Razorpay(options);
+      rzp.open();
+    }
+  </script>
+</body>
+</html>
