@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Case Studies — AI Voice Agent & WhatsApp Systems | Sharanjeet Singh</title>
-  <meta name="description" content="Live AI voice agent and WhatsApp automation systems built for clinics, brokerages and dealerships in India — what the problem was, what I built, and what it changed." />
+  <meta name="description" content="AI voice agent and WhatsApp automation systems built for a clinic, a showroom and a brokerage in India — the problem, what I built, and where each system stands today." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -29,65 +29,131 @@
 
   <!-- PAGE HEADER -->
   <div class="page-header">
-    <span class="section-tag">My Work</span>
-    <h1>My <span class="gradient-text">Portfolio</span></h1>
-    <p>A selection of projects I've built and edited across AI video and web</p>
+    <span class="section-tag">Case Studies</span>
+    <h1>Systems I've <span class="gradient-text">built</span></h1>
+    <p>What each business was dealing with, what I built, and where the system stands today. Clients are described by category — I don't publish names.</p>
   </div>
 
-  <!-- FILTER TABS -->
-  <section style="padding-top: 0; padding-bottom: 1rem;">
+  <!-- CASE STUDIES -->
+  <section style="padding-top: 0;">
     <div class="container">
-      <div class="filter-tabs">
-        <button class="filter-tab active" data-filter="all">All</button>
-        <button class="filter-tab" data-filter="ai">AI Video</button>
-        <button class="filter-tab" data-filter="web">Web</button>
-      </div>
+      <div class="case-grid">
 
-      <div class="cards-grid cards-grid-2">
-
-        <!-- Project 1 -->
-        <div class="card portfolio-card fade-up" data-category="ai">
-          <div class="portfolio-thumb">🤖</div>
-          <div class="portfolio-info">
-            <span class="badge badge-ai">AI Video</span>
-            <h3>AI-Generated Video #1</h3>
-            <p>Fully AI-generated video — script, voiceover, visuals, and editing all done using AI tools.</p>
-            <a href="https://www.instagram.com/sharanjeet_singh.ai/" target="_blank" class="card-link">View on Instagram →</a>
+        <!-- Case 1 — aesthetic clinic -->
+        <article class="card case-card fade-up">
+          <div class="case-head">
+            <span class="case-label">Aesthetic clinic · Greater Noida</span>
           </div>
-        </div>
+          <h3>An outbound agent that works through a backlog of old enquiries</h3>
 
-        <!-- Project 2 -->
-        <div class="card portfolio-card fade-up" data-category="ai">
-          <div class="portfolio-thumb">✨</div>
-          <div class="portfolio-info">
-            <span class="badge badge-ai">AI Video</span>
-            <h3>AI-Generated Video #2</h3>
-            <p>AI-powered short-form content with automated captions, AI visuals, and smart scene transitions.</p>
-            <a href="https://www.instagram.com/sharanjeet_singh.ai/" target="_blank" class="card-link">View on Instagram →</a>
+          <div class="case-block">
+            <h4>The problem</h4>
+            <p>Months of old enquiries were sitting in a spreadsheet. The front desk was busy with walk-ins and never got to calling them back.</p>
           </div>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="card portfolio-card fade-up" data-category="ai">
-          <div class="portfolio-thumb">🎬</div>
-          <div class="portfolio-info">
-            <span class="badge badge-ai">AI Video</span>
-            <h3>AI-Generated Video #3</h3>
-            <p>AI video with custom voiceover, B-roll generation, and dynamic subtitles — ready for social media.</p>
-            <a href="https://www.instagram.com/sharanjeet_singh.ai/" target="_blank" class="card-link">View on Instagram →</a>
+          <div class="case-block">
+            <h4>What I built</h4>
+            <ul class="case-list">
+              <li>An outbound voice agent on Bolna that calls dormant leads in Hindi and English</li>
+              <li>A connection to the clinic's CRM through n8n</li>
+              <li>IST scheduling that understands spoken dates and weekdays</li>
+              <li>Duplicate protection, so the same person is never called twice</li>
+            </ul>
           </div>
-        </div>
 
-        <!-- Project 4 -->
-        <div class="card portfolio-card fade-up" data-category="web">
-          <div class="portfolio-thumb">🌐</div>
-          <div class="portfolio-info">
-            <span class="badge badge-web">Web</span>
-            <h3>Personal Portfolio Website</h3>
-            <p>This website — a dark-themed, mobile-first multi-page portfolio built with HTML, CSS & JS.</p>
-            <a href="index.html" class="card-link">You're on it →</a>
+          <div class="case-block">
+            <h4>What it does</h4>
+            <p>Works through the backlog on a schedule, qualifies interest on the call, books the appointment into the CRM, and alerts staff for anyone who needs a human.</p>
           </div>
-        </div>
+
+          <ul class="stack-tags">
+            <li>Bolna</li>
+            <li>n8n</li>
+            <li>CRM integration</li>
+            <li>Hindi + English</li>
+          </ul>
+
+          <!-- FILL: result metrics when available -->
+          <p class="case-status case-status-live">
+            <span class="status-dot"></span>
+            Status: <strong>Live in production</strong>
+          </p>
+        </article>
+
+        <!-- Case 2 — sanitaryware showroom -->
+        <article class="card case-card fade-up">
+          <div class="case-head">
+            <span class="case-label">Bathroom &amp; sanitaryware showroom · Delhi · Est. 1985</span>
+          </div>
+          <h3>Phone-only enquiries moved onto WhatsApp, with a trail</h3>
+
+          <div class="case-block">
+            <h4>The problem</h4>
+            <p>A 40-year-old brand with no digital presence. Enquiries came by phone only and nothing was tracked, so the showroom's catalogue never reached anyone who hadn't walked in.</p>
+          </div>
+
+          <div class="case-block">
+            <h4>What I built</h4>
+            <ul class="case-list">
+              <li>WhatsApp Business API setup</li>
+              <li>A content system for the product catalogue</li>
+              <li>Enquiry capture routed to the sales team</li>
+            </ul>
+          </div>
+
+          <div class="case-block">
+            <h4>What it does</h4>
+            <p>Product enquiries arrive on WhatsApp with context, get logged, and reach the right person instead of scattering across personal phones.</p>
+          </div>
+
+          <ul class="stack-tags">
+            <li>WhatsApp Business API</li>
+            <li>Content system</li>
+            <li>Lead capture</li>
+          </ul>
+
+          <!-- FILL: result metrics when available -->
+          <p class="case-status case-status-live">
+            <span class="status-dot"></span>
+            <!-- FILL: month/year the system went live -->
+            Status: <strong>Running since [month/year]</strong>
+          </p>
+        </article>
+
+        <!-- Case 3 — real estate brokerage (in build) -->
+        <article class="card case-card fade-up">
+          <div class="case-head">
+            <span class="case-label">Real estate brokerage · Tricity + Himachal</span>
+            <span class="case-flag">In build</span>
+          </div>
+          <h3>Listings tracked automatically, enquiries answered in Hinglish</h3>
+
+          <div class="case-block">
+            <h4>The problem</h4>
+            <p>Listings needed manual tracking across portals, and enquiries went cold before anyone followed up.</p>
+          </div>
+
+          <div class="case-block">
+            <h4>What I'm building</h4>
+            <ul class="case-list">
+              <li>An automated listing pipeline</li>
+              <li>A Hinglish inbound voice agent</li>
+              <li>A WhatsApp nurture sequence</li>
+            </ul>
+          </div>
+
+          <ul class="stack-tags">
+            <li>Listing automation</li>
+            <li>Voice agent</li>
+            <li>WhatsApp nurture</li>
+          </ul>
+
+          <!-- FILL: result metrics when available -->
+          <p class="case-status case-status-build">
+            <span class="status-dot"></span>
+            Status: <strong>In build</strong> — listing pipeline live, voice agent in testing
+          </p>
+        </article>
 
       </div>
     </div>
@@ -97,9 +163,9 @@
   <section>
     <div class="container">
       <div class="card" style="text-align:center; padding: 3rem 2rem; border-color: var(--border-accent);">
-        <h2 style="font-size:clamp(1.4rem,3vw,2rem); margin-bottom:0.75rem;">Want something like this?</h2>
-        <p style="color:var(--text-secondary); margin-bottom:1.75rem;">Let's work on your project together.</p>
-        <a href="https://wa.me/919811006425" target="_blank" class="btn btn-whatsapp">💬 Discuss My Project</a>
+        <h2 style="font-size:clamp(1.4rem,3vw,2rem); margin-bottom:0.75rem;">Want a system like one of these?</h2>
+        <p style="color:var(--text-secondary); margin-bottom:1.75rem;">Tell me what's slipping through the cracks and I'll tell you whether it's worth automating.</p>
+        <a href="https://wa.me/919811006425" target="_blank" class="btn btn-whatsapp">💬 Message me on WhatsApp</a>
       </div>
     </div>
   </section>

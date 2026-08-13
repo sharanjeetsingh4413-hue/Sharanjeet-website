@@ -40,21 +40,3 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
 document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
-
-// Portfolio filter tabs
-const filterTabs = document.querySelectorAll('.filter-tab');
-const portfolioCards = document.querySelectorAll('.portfolio-card[data-category]');
-
-filterTabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    filterTabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-
-    const filter = tab.dataset.filter;
-    portfolioCards.forEach(card => {
-      const match = filter === 'all' || card.dataset.category === filter;
-      card.style.display = match ? 'flex' : 'none';
-      card.style.flexDirection = match ? 'column' : '';
-    });
-  });
-});

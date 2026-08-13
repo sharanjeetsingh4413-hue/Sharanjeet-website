@@ -505,73 +505,153 @@ section {
 }
 
 /* =============================================
-   PORTFOLIO PAGE
+   CASE STUDIES
    ============================================= */
-.portfolio-hero {
-  padding: 10rem 2rem 5rem;
-  text-align: center;
-  position: relative;
-  z-index: 1;
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
-.portfolio-card {
-  overflow: hidden;
-  padding: 0;
-}
-
-.portfolio-thumb {
-  height: 180px;
-  background: linear-gradient(135deg, var(--bg-secondary), rgba(124, 58, 237, 0.2));
+.case-card {
   display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.case-head {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: 3rem;
+  gap: 0.6rem;
 }
 
-.portfolio-info {
-  padding: 1.5rem;
+.case-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
 }
 
-.portfolio-info .badge {
-  margin-bottom: 0.75rem;
+/* Flag on engagements that are not finished, so an in-build system is never
+   mistaken for a delivered one. */
+.case-flag {
+  display: inline-block;
+  padding: 0.15rem 0.65rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: rgba(251, 191, 36, 0.12);
+  color: #fcd34d;
+  border: 1px solid rgba(251, 191, 36, 0.35);
 }
 
-.portfolio-info h3 {
+.case-card h3 {
+  font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.case-block h4 {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
   margin-bottom: 0.5rem;
 }
 
-.portfolio-info p {
-  font-size: 0.9rem;
+.case-block p {
   color: var(--text-secondary);
-  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
-.filter-tabs {
+.case-list {
+  list-style: none;
   display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.filter-tab {
-  padding: 0.4rem 1.2rem;
-  border-radius: 50px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
+.case-list li {
+  position: relative;
+  padding-left: 1.1rem;
   color: var(--text-secondary);
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: var(--transition);
-  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
-.filter-tab:hover,
-.filter-tab.active {
-  border-color: var(--accent-purple);
-  color: var(--accent-purple-light);
-  background: rgba(124, 58, 237, 0.1);
+.case-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-purple-light);
+}
+
+.stack-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stack-tags li {
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.case-status {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.case-status .status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.case-status strong {
+  font-weight: 600;
+}
+
+.case-status-live .status-dot {
+  background: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+
+.case-status-live strong {
+  color: #86efac;
+}
+
+.case-status-build .status-dot {
+  background: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.15);
+}
+
+.case-status-build strong {
+  color: #fcd34d;
 }
 
 /* =============================================
