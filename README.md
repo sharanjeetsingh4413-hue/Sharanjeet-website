@@ -1,7 +1,31 @@
 
-# Portfolio Website — Deployment Guide
+# sharanjeetdigital.in
 
-This repository contains a static portfolio website. Below are simple options to deploy the site and obtain a public link you can share with clients.
+Static site — plain HTML, CSS and JS. No framework, no bundler.
+
+## Editing the nav or footer
+
+They live in `partials/header.html` and `partials/footer.html`, and are injected
+into every page by a small Node script. After editing a partial:
+
+```bash
+node build.js          # inject partials into every page
+node build.js --check  # exits 1 if any page is out of date (no writes)
+```
+
+The generated HTML is **committed to the repo**. Both GitHub Pages (which
+publishes the repo root as-is) and Vercel serve these files directly — there is
+no build command configured on either, and none should be added. Run `node
+build.js` locally and commit the result.
+
+There is deliberately no `package.json`: adding one with a build script would
+make Vercel try to run a build and change how the project deploys.
+
+---
+
+# Deployment Guide
+
+Below are simple options to deploy the site and obtain a public link you can share with clients.
 
 Choose one of the deployment methods below.
 

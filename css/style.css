@@ -385,6 +385,22 @@ section {
   margin: 0 auto;
 }
 
+.about-body {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.about-body p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.about-body p:last-child {
+  margin-bottom: 0;
+}
+
 /* =============================================
    CARDS GRID
    ============================================= */
