@@ -5,11 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services — AI Voice Agents, WhatsApp Automation & Lead Systems | Sharanjeet Singh</title>
   <meta name="description" content="Inbound and outbound AI voice agents, WhatsApp automation on the Meta Cloud API, and lead pipelines wired into your CRM — built and maintained for Indian businesses." />
+
+  <link rel="canonical" href="https://www.sharanjeetdigital.in/services.html" />
+
+  <!-- Favicon. The SVG covers modern browsers; the PNGs are fallbacks for
+       older ones and for the iOS home screen. -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0a0a0f" />
+
+  <!-- Open Graph / Twitter. WhatsApp is the main distribution channel, so a
+       shared link needs to preview with a title, a line of copy and an image. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sharanjeet Singh — AI Systems" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:url" content="https://www.sharanjeetdigital.in/services.html" />
+  <meta property="og:title" content="Services — AI Voice Agents, WhatsApp Automation &amp; Lead Systems | Sharanjeet Singh" />
+  <meta property="og:description" content="Inbound and outbound AI voice agents, WhatsApp automation on the Meta Cloud API, and lead pipelines wired into your CRM — built and maintained for Indian businesses." />
+  <meta property="og:image" content="https://www.sharanjeetdigital.in/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sharanjeet Singh — AI voice agents and WhatsApp systems for Indian businesses" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Services — AI Voice Agents, WhatsApp Automation &amp; Lead Systems | Sharanjeet Singh" />
+  <meta name="twitter:description" content="Inbound and outbound AI voice agents, WhatsApp automation on the Meta Cloud API, and lead pipelines wired into your CRM — built and maintained for Indian businesses." />
+  <meta name="twitter:image" content="https://www.sharanjeetdigital.in/assets/og-image.jpg" />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
   <!-- @include header -->
+  <!-- Icon sprite. Geometric, 24px grid, single accent colour, stroke weight tuned per
+       size so every icon renders at 1.5px on screen (see .icon / .card-icon in style.css).
+       Lives here so it loads once per page alongside the nav. -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-voice" viewBox="0 0 24 24">
+      <path d="M4 13v-1a8 8 0 0 1 16 0v1" />
+      <rect x="2.5" y="13" width="4.5" height="6.5" rx="1.75" />
+      <rect x="17" y="13" width="4.5" height="6.5" rx="1.75" />
+    </symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24">
+      <path d="M20.5 11.6a8 8 0 0 1-11.8 7.1L4 20l1.4-4.5A8 8 0 1 1 20.5 11.6z" />
+    </symbol>
+    <symbol id="icon-pipeline" viewBox="0 0 24 24">
+      <rect x="2.5" y="3.5" width="6.5" height="5" rx="1.5" />
+      <rect x="2.5" y="15.5" width="6.5" height="5" rx="1.5" />
+      <rect x="15" y="9.5" width="6.5" height="5" rx="1.5" />
+      <path d="M9 6h1.5a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5H9" />
+      <path d="M12 12h3" />
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
+      <circle cx="12" cy="12" r="3.75" />
+      <circle cx="16.9" cy="7.1" r="1" fill="currentColor" stroke="none" />
+    </symbol>
+  </svg>
+  
   <nav class="navbar">
     <a href="index.html" class="nav-logo">
       <img src="assets/logo.svg" alt="Sharanjeet Singh" class="site-logo" />
@@ -42,7 +95,7 @@
 
         <!-- 1. Voice agents -->
         <article id="voice-agents" class="card service-block fade-up">
-          <span class="card-icon">🤖</span>
+          <svg class="card-icon" aria-hidden="true"><use href="#icon-voice" /></svg>
           <h2>AI voice agents</h2>
           <p class="service-lede">
             A phone line that never goes unanswered. The agent picks up on the first ring at any hour,
@@ -72,7 +125,7 @@
 
         <!-- 2. WhatsApp automation -->
         <article id="whatsapp" class="card service-block fade-up">
-          <span class="card-icon">📲</span>
+          <svg class="card-icon" aria-hidden="true"><use href="#icon-chat" /></svg>
           <h2>WhatsApp automation</h2>
           <p class="service-lede">
             WhatsApp is where your customers already are. The problem is that enquiries land on personal
@@ -97,7 +150,7 @@
 
         <!-- 3. Lead pipelines and integrations -->
         <article id="pipelines" class="card service-block fade-up">
-          <span class="card-icon">⚙️</span>
+          <svg class="card-icon" aria-hidden="true"><use href="#icon-pipeline" /></svg>
           <h2>Lead pipelines &amp; integrations</h2>
           <p class="service-lede">
             Most leads aren't lost because nobody wanted them. They're lost in the gap between two tools
@@ -137,7 +190,7 @@
           That's what the first call is for. Tell me where enquiries are getting lost and I'll tell you
           which part of this actually fixes it — or whether it needs fixing at all.
         </p>
-        <a href="https://wa.me/919811006425?text=Hi%2C%20I%27d%20like%20to%20talk%20about%20an%20AI%20voice%20or%20WhatsApp%20system" target="_blank" class="btn btn-whatsapp btn-lg">💬 Book a discovery call</a>
+        <a href="https://wa.me/919811006425?text=Hi%2C%20I%27d%20like%20to%20talk%20about%20an%20AI%20voice%20or%20WhatsApp%20system" target="_blank" class="btn btn-whatsapp btn-lg"><svg class="icon" aria-hidden="true"><use href="#icon-chat" /></svg> Book a discovery call</a>
         <p style="color:var(--text-muted); font-size:0.85rem; margin-top:1.25rem;">
           Or <a class="inline-link" href="index.html#demo">have the demo agent call you first</a>, or read
           <a class="inline-link" href="packages.html">how an engagement works</a>.

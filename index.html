@@ -5,11 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Voice Agents & WhatsApp Automation for Indian Businesses — Sharanjeet Singh</title>
   <meta name="description" content="I build AI voice agents and WhatsApp systems for businesses in Delhi and across India — answering calls in Hindi and English, qualifying every lead, and following up automatically." />
+
+  <link rel="canonical" href="https://www.sharanjeetdigital.in/" />
+
+  <!-- Favicon. The SVG covers modern browsers; the PNGs are fallbacks for
+       older ones and for the iOS home screen. -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0a0a0f" />
+
+  <!-- Open Graph / Twitter. WhatsApp is the main distribution channel, so a
+       shared link needs to preview with a title, a line of copy and an image. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sharanjeet Singh — AI Systems" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:url" content="https://www.sharanjeetdigital.in/" />
+  <meta property="og:title" content="AI Voice Agents &amp; WhatsApp Automation for Indian Businesses — Sharanjeet Singh" />
+  <meta property="og:description" content="I build AI voice agents and WhatsApp systems for businesses in Delhi and across India — answering calls in Hindi and English, qualifying every lead, and following up automatically." />
+  <meta property="og:image" content="https://www.sharanjeetdigital.in/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sharanjeet Singh — AI voice agents and WhatsApp systems for Indian businesses" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Voice Agents &amp; WhatsApp Automation for Indian Businesses — Sharanjeet Singh" />
+  <meta name="twitter:description" content="I build AI voice agents and WhatsApp systems for businesses in Delhi and across India — answering calls in Hindi and English, qualifying every lead, and following up automatically." />
+  <meta name="twitter:image" content="https://www.sharanjeetdigital.in/assets/og-image.jpg" />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
   <!-- @include header -->
+  <!-- Icon sprite. Geometric, 24px grid, single accent colour, stroke weight tuned per
+       size so every icon renders at 1.5px on screen (see .icon / .card-icon in style.css).
+       Lives here so it loads once per page alongside the nav. -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-voice" viewBox="0 0 24 24">
+      <path d="M4 13v-1a8 8 0 0 1 16 0v1" />
+      <rect x="2.5" y="13" width="4.5" height="6.5" rx="1.75" />
+      <rect x="17" y="13" width="4.5" height="6.5" rx="1.75" />
+    </symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24">
+      <path d="M20.5 11.6a8 8 0 0 1-11.8 7.1L4 20l1.4-4.5A8 8 0 1 1 20.5 11.6z" />
+    </symbol>
+    <symbol id="icon-pipeline" viewBox="0 0 24 24">
+      <rect x="2.5" y="3.5" width="6.5" height="5" rx="1.5" />
+      <rect x="2.5" y="15.5" width="6.5" height="5" rx="1.5" />
+      <rect x="15" y="9.5" width="6.5" height="5" rx="1.5" />
+      <path d="M9 6h1.5a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5H9" />
+      <path d="M12 12h3" />
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
+      <circle cx="12" cy="12" r="3.75" />
+      <circle cx="16.9" cy="7.1" r="1" fill="currentColor" stroke="none" />
+    </symbol>
+  </svg>
+  
   <nav class="navbar">
     <a href="index.html" class="nav-logo">
       <img src="assets/logo.svg" alt="Sharanjeet Singh" class="site-logo" />
@@ -54,7 +107,7 @@
           Hear a live demo →
         </a>
         <a href="https://wa.me/919811006425" target="_blank" class="btn btn-whatsapp">
-          💬 Message me on WhatsApp
+          <svg class="icon" aria-hidden="true"><use href="#icon-chat" /></svg> Message me on WhatsApp
         </a>
       </div>
     </div>
@@ -209,21 +262,21 @@
       <div class="cards-grid">
 
         <div class="card fade-up">
-          <span class="card-icon">🤖</span>
+          <svg class="card-icon" aria-hidden="true"><use href="#icon-voice" /></svg>
           <h3>AI voice agents</h3>
           <p>Inbound agents that answer every call, and outbound agents that work a list — in Hindi and English, with a handover to your team when a caller needs one.</p>
           <a href="services.html#voice-agents" class="card-link">Learn more →</a>
         </div>
 
         <div class="card fade-up">
-          <span class="card-icon">📲</span>
+          <svg class="card-icon" aria-hidden="true"><use href="#icon-chat" /></svg>
           <h3>WhatsApp automation</h3>
           <p>Official WhatsApp Business API, qualification and nurture flows, and notifications — so enquiries stop scattering across personal phones.</p>
           <a href="services.html#whatsapp" class="card-link">Learn more →</a>
         </div>
 
         <div class="card fade-up">
-          <span class="card-icon">⚙️</span>
+          <svg class="card-icon" aria-hidden="true"><use href="#icon-pipeline" /></svg>
           <h3>Lead pipelines &amp; integrations</h3>
           <p>The plumbing behind both: leads captured, scored and routed into your CRM, Sheets or whatever you already run on.</p>
           <a href="services.html#pipelines" class="card-link">Learn more →</a>
@@ -352,6 +405,21 @@
       </div>
     </section>
 
+  <!-- INSTAGRAM STRIP -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <a class="ig-strip" href="https://www.instagram.com/sharanjeet_singh.ai/" target="_blank" rel="noopener">
+        <svg class="icon ig-strip-icon" aria-hidden="true"><use href="#icon-instagram" /></svg>
+        <span class="ig-strip-text">
+          <strong>@sharanjeet_singh.ai</strong>
+          <span>I break down how these systems are built — the agents, what they say, and where they go wrong. Most of my clients find me here first.</span>
+        </span>
+        <!-- FILL: follower count, e.g. "12.4k followers". Delete this span if you'd rather not publish it. -->
+        <span class="ig-strip-count">[follower count] followers</span>
+      </a>
+    </div>
+  </section>
+
   <!-- CTA BANNER -->
   <section>
     <div class="container">
@@ -363,7 +431,7 @@
           Let's discuss your project. Message me directly on WhatsApp for a quick response.
         </p>
         <a href="https://wa.me/919811006425" target="_blank" class="btn btn-whatsapp btn-lg">
-          💬 Chat on WhatsApp
+          <svg class="icon" aria-hidden="true"><use href="#icon-chat" /></svg> Chat on WhatsApp
         </a>
       </div>
     </div>
@@ -387,6 +455,49 @@
     </div>
   </footer>
   <!-- @end footer -->
+
+  <!-- Structured data. Kept to facts that are stated elsewhere on the site;
+       no review counts, no aggregate ratings, no invented service area. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://www.sharanjeetdigital.in/#business",
+    "name": "Sharanjeet Singh — AI Systems",
+    "alternateName": "Sharanjeet Singh AI Systems",
+    "description": "AI voice agents, WhatsApp automation and lead pipelines for Indian businesses — answering calls in Hindi and English, qualifying leads, and following up automatically.",
+    "url": "https://www.sharanjeetdigital.in/",
+    "image": "https://www.sharanjeetdigital.in/assets/og-image.jpg",
+    "telephone": "+91-98110-06425",
+    "email": "sharanjeetsingh4413@gmail.com",
+    "priceRange": "₹₹",
+    "founder": {
+      "@type": "Person",
+      "name": "Sharanjeet Singh"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New Delhi",
+      "addressCountry": "IN"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "India" }
+    ],
+    "availableLanguage": ["en", "hi"],
+    "sameAs": [
+      "https://www.instagram.com/sharanjeet_singh.ai/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI voice agents", "description": "Inbound and outbound conversational voice agents in Hindi and English, connected to the client's CRM." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "WhatsApp automation", "description": "Lead capture, qualification, nurture and notifications on the official WhatsApp Business API." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lead pipelines and integrations", "description": "Capture, scoring and routing that connects the tools a business already uses." } }
+      ]
+    }
+  }
+  </script>
 
   <script src="js/main.js"></script>
   <script src="js/demo.js"></script>
