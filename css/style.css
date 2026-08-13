@@ -483,6 +483,81 @@ section {
   flex-direction: column;
 }
 
+/* ---------- Services page: one block per system ---------- */
+.service-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.service-block {
+  /* Clear the fixed navbar when the homepage cards link straight to a system */
+  scroll-margin-top: 6rem;
+}
+
+.service-block h2 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.85rem;
+}
+
+.service-block p {
+  color: var(--text-secondary);
+  font-size: 0.97rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  max-width: 68ch;
+}
+
+.service-block p:last-of-type {
+  margin-bottom: 0;
+}
+
+.service-block strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.service-lede {
+  font-size: 1.08rem !important;
+  color: var(--text-primary) !important;
+  line-height: 1.6 !important;
+}
+
+.stack-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+  margin-top: 1.5rem !important;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem !important;
+}
+
+.stack-line-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.stack-line-items {
+  color: var(--text-secondary);
+}
+
+.service-aside {
+  margin-top: 2rem;
+  padding: 1.1rem 1.35rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 .service-card .badge {
   display: inline-block;
   padding: 0.2rem 0.75rem;
