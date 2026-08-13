@@ -414,6 +414,11 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+/* Four cards that should sit 2x2 rather than 3+1 on desktop */
+.cards-grid-pairs {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+}
+
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -593,6 +598,50 @@ section {
 .service-card .btn {
   margin-top: auto;
   padding-top: 1.25rem;
+}
+
+/* =============================================
+   LEGAL PAGES  (privacy, terms, refund)
+   The global reset strips margins and nothing restored them here, so these
+   pages ran together as one block of text. Scoped to <main>, which only the
+   legal pages use.
+   ============================================= */
+main h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 0.5rem;
+}
+
+main h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 2.5rem 0 0.75rem;
+}
+
+main p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+main ul {
+  margin: 0 0 1.25rem 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+main li {
+  margin-bottom: 0.6rem;
+}
+
+main strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+main a {
+  color: var(--accent-purple-light);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* =============================================
