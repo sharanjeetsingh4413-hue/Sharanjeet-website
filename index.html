@@ -49,7 +49,6 @@
         brokerages and dealerships run their lead flow on — so nobody waits on hold and no enquiry goes cold.
       </p>
       <div class="hero-buttons">
-        <!-- Primary CTA target (#demo) is built in Task 4 — the live demo section on this page. -->
         <a href="#demo" class="btn btn-primary">
           Hear a live demo →
         </a>
@@ -62,6 +61,141 @@
 
   <!-- Stats counter removed: the old numbers (3+ clients, 100% satisfaction) read as a beginner
        and were unverifiable. Case studies (Task 3) carry the credibility instead. -->
+
+  <!-- LIVE DEMO -->
+  <section id="demo" class="demo-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Live Demo</span>
+        <h2>Don't read about it — <span class="gradient-text">take the call</span></h2>
+        <p>
+          Every competitor shows you screenshots. I'd rather let the agent speak for itself: leave your
+          number and it will ring you, ask what your business does, and handle the conversation the way
+          it would handle a real enquiry.
+        </p>
+      </div>
+
+      <div class="demo-grid">
+
+        <!-- Primary path: callback request -->
+        <div class="card">
+          <h3>Get a call from the agent</h3>
+          <!-- FILL: confirm the real callback window and typical call length once the n8n workflow is live -->
+          <p class="demo-lede">
+            It's a short call — a couple of minutes — and it usually comes through within a few minutes
+            of you asking. Hang up whenever you've heard enough.
+          </p>
+
+          <form id="demo-form" class="demo-form" novalidate>
+            <div class="field">
+              <label for="demo-name">Your name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="demo-name" name="name" autocomplete="name" required placeholder="Sharanjeet" />
+              <p class="field-error" data-error-for="name" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="demo-phone">Phone number, with country code <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="demo-phone" name="phone" autocomplete="tel" required placeholder="+91 98110 06425" />
+              <p class="field-error" data-error-for="phone" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="demo-business">What kind of business? <span class="req" aria-hidden="true">*</span></label>
+              <select id="demo-business" name="businessType" required>
+                <option value="">Choose one</option>
+                <option value="clinic">Clinic or hospital</option>
+                <option value="real-estate">Real estate or brokerage</option>
+                <option value="dealership">Dealership or showroom</option>
+                <option value="retail-distribution">Retail or distribution</option>
+                <option value="services">Services or consulting</option>
+                <option value="education">Coaching or education</option>
+                <option value="other">Something else</option>
+              </select>
+              <p class="field-error" data-error-for="businessType" role="alert"></p>
+            </div>
+
+            <!-- Honeypot. Hidden from people, tempting to bots. Anything here means the
+                 submission is discarded. Kept out of the tab order and the accessibility tree. -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="demo-website">Website</label>
+              <input type="text" id="demo-website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button type="submit" id="demo-submit" class="btn btn-primary">Call me →</button>
+
+            <p class="form-status" id="demo-status" hidden></p>
+
+            <p class="form-note">
+              One demo call per visit. Your number is used to place the call and to reply if you ask a
+              question — see the <a class="inline-link" href="privacy.html">privacy policy</a>.
+            </p>
+          </form>
+        </div>
+
+        <!-- Secondary path + expectations -->
+        <div class="demo-side">
+          <div class="card">
+            <h3>Rather dial in yourself?</h3>
+            <p class="demo-lede">Call the demo line directly and the agent will pick up.</p>
+            <!-- FILL: demo agent phone number — set DEMO_CONFIG.phone in js/demo.js and this
+                 becomes a click-to-call link automatically. -->
+            <div id="demo-call-wrap"></div>
+          </div>
+
+          <div class="card">
+            <h3>Before you ask for a call</h3>
+            <ul class="demo-expect">
+              <li>The voice on the call is an <strong>AI agent, not a person</strong> — not me, and not a recording of me.</li>
+              <li>It's a demonstration agent. It's built to show how one behaves on a call, not to answer for a live business.</li>
+              <li>It speaks Hindi and English, and will follow whichever you use.</li>
+              <li>Calls are placed for demonstration only. Ask it awkward questions — that's the point.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Lead magnets that already live under /r/ -->
+      <div class="guides">
+        <h3 class="guides-title">Or read how these systems are put together</h3>
+        <p class="guides-lede">
+          Full breakdowns of the systems I build — the agents, the rulebooks they follow, and the sheets
+          behind them. No email required.
+        </p>
+        <div class="guides-grid">
+          <a class="guide-link" href="r/receptionist/" >
+            <strong>AI receptionist <span class="guide-tag">Hinglish</span></strong>
+            <span>Five agents that run a front desk, with a calculator for what missed calls cost you.</span>
+          </a>
+          <a class="guide-link" href="r/system/">
+            <strong>5-Agent Lead System <span class="guide-tag">Hinglish</span></strong>
+            <span>Capture, score, enrich, write, assign — one job per agent, with scoring logic per industry.</span>
+          </a>
+          <a class="guide-link" href="r/whatsapp/">
+            <strong>WhatsApp Desk</strong>
+            <span>Five agents, one inbox, and the triage rulebook for orders, questions, complaints and payments.</span>
+          </a>
+          <a class="guide-link" href="r/comeback/">
+            <strong>Comeback System</strong>
+            <span>Four agents that work a dead list — who to contact, who to leave alone, and what to send.</span>
+          </a>
+          <a class="guide-link" href="r/backoffice/">
+            <strong>Back-office agent</strong>
+            <span>Four agents for invoices, entries and reconciliation, including where extraction breaks.</span>
+          </a>
+          <a class="guide-link" href="r/ai-receptionist-guide.pdf">
+            <strong>AI receptionist guide <span class="guide-tag">PDF</span></strong>
+            <span>The receptionist breakdown as a PDF you can keep.</span>
+          </a>
+          <a class="guide-link" href="r/whatsapp-desk-guide.pdf">
+            <strong>WhatsApp Desk guide <span class="guide-tag">PDF</span></strong>
+            <span>The WhatsApp triage workflow as a PDF you can keep.</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- FEATURED SERVICES -->
   <section>
@@ -228,5 +362,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/demo.js"></script>
 </body>
 </html>
