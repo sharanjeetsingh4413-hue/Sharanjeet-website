@@ -3,106 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- TASK 5: retitle to "How I Work" once the engagement-model rewrite lands and the owner confirms direction. -->
-  <title>Engagements & Pricing — AI Voice & WhatsApp Systems | Sharanjeet Singh</title>
-  <meta name="description" content="How an AI voice agent or WhatsApp automation build runs — discovery call, system design, build, go-live, and an ongoing retainer scoped to your call volume." />
+  <title>How I Work — AI Voice & WhatsApp System Engagements | Sharanjeet Singh</title>
+  <meta name="description" content="How an AI voice agent or WhatsApp automation build runs — discovery call, system design, build, go-live, and an ongoing retainer scoped to your call volume. Systems start at ₹35,000 setup." />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Razorpay checkout, kept for reference after the self-serve pricing tiles were retired.
+       The tiles anchored every conversation at ₹999–₹12,999, far below current deal sizes,
+       and removed the qualification step the sales process depends on. The CSS that styled
+       them (.pricing-card, .pay-btn, .price-tag, .feature-list, .popular-badge, .secure-note)
+       was removed with them and is recoverable from git history if checkout ever comes back.
+
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-  <style>
-    .price-tag {
-      font-size: 2.2rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--accent-purple-light), var(--accent-cyan-light));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-    .price-note {
-      color: var(--text-muted);
-      font-size: 0.8rem;
-      margin-bottom: 1.25rem;
-    }
-    .feature-list {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-    .feature-list li {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-    }
-    .feature-list li::before {
-      content: '✓';
-      color: var(--accent-cyan);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .popular-badge {
-      position: absolute;
-      top: -1px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
-      color: white;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 0.25rem 1rem;
-      border-radius: 0 0 8px 8px;
-      letter-spacing: 0.5px;
-      white-space: nowrap;
-    }
-    .pay-btn {
-      width: 100%;
-      background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
-      color: white;
-      border: none;
-      border-radius: 50px;
-      padding: 0.85rem 1.5rem;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      margin-top: auto;
-    }
-    .pay-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
-    }
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 1.5rem;
-      align-items: start;
-    }
-    .pricing-card {
-      display: flex;
-      flex-direction: column;
-      padding: 2rem;
-      position: relative;
-    }
-    .custom-section {
-      margin-top: 4rem;
-      text-align: center;
-    }
-    .secure-note {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      color: var(--text-muted);
-      font-size: 0.8rem;
-      margin-top: 3rem;
-    }
-  </style>
+  -->
 </head>
 <body>
 
@@ -126,155 +38,239 @@
 
   <!-- PAGE HEADER -->
   <div class="page-header">
-    <span class="section-tag">Transparent Pricing</span>
-    <h1>Simple <span class="gradient-text">Packages</span></h1>
-    <p>Pick a package, pay securely online, and I'll get started right away</p>
+    <span class="section-tag">How I Work</span>
+    <h1>From first call to a <span class="gradient-text">system that runs</span></h1>
+    <p>What an engagement looks like, what you get, and what it costs to start.</p>
   </div>
 
-  <!-- PRICING -->
+  <!-- 1. HOW AN ENGAGEMENT WORKS -->
   <section style="padding-top: 0;">
     <div class="container">
-      <div class="pricing-grid">
-
-        <!-- Package 1: Reel Edit -->
-        <div class="card pricing-card fade-up">
-          <span class="card-icon">✂️</span>
-          <h3>Reel / Short Edit</h3>
-          <div class="price-tag">₹999</div>
-          <div class="price-note">One-time payment</div>
-          <ul class="feature-list">
-            <li>Up to 60 sec video</li>
-            <li>Cuts & transitions</li>
-            <li>AI captions included</li>
-            <li>Background music</li>
-            <li>2 revisions</li>
-            <li>Delivery in 2 days</li>
-          </ul>
-          <button class="pay-btn" onclick="openRazorpay('Reel / Short Edit', 99900)">
-            Pay ₹999 →
-          </button>
-        </div>
-
-        <!-- Package 2: AI Video (Popular) -->
-        <div class="card pricing-card fade-up" style="border-color: var(--accent-purple);">
-          <span class="popular-badge">⭐ Most Popular</span>
-          <span class="card-icon">🤖</span>
-          <h3>AI Video Production</h3>
-          <div class="price-tag">₹8,000</div>
-          <div class="price-note">One-time payment</div>
-          <ul class="feature-list">
-            <li>Full AI-generated video</li>
-            <li>AI voiceover & script</li>
-            <li>AI visuals & B-roll</li>
-            <li>Captions & subtitles</li>
-            <li>Thumbnail included</li>
-            <li>WhatsApp delivery</li>
-            <li>2 revisions</li>
-            <li>Delivery in 3-4 days</li>
-          </ul>
-          <button class="pay-btn" onclick="openRazorpay('AI Video Production', 800000)">
-            Pay ₹8,000 →
-          </button>
-        </div>
-
-        <!-- Package 3: Landing Page -->
-        <div class="card pricing-card fade-up">
-          <span class="card-icon">🌐</span>
-          <h3>Landing Page</h3>
-          <div class="price-tag">₹4,999</div>
-          <div class="price-note">One-time payment</div>
-          <ul class="feature-list">
-            <li>Custom design</li>
-            <li>Mobile responsive</li>
-            <li>WhatsApp CTA button</li>
-            <li>Fast loading</li>
-            <li>SEO-ready</li>
-            <li>2 revisions</li>
-            <li>Delivery in 5-7 days</li>
-          </ul>
-          <button class="pay-btn" onclick="openRazorpay('Landing Page', 499900)">
-            Pay ₹4,999 →
-          </button>
-        </div>
-
-        <!-- Package 4: AI Content Monthly -->
-        <div class="card pricing-card fade-up">
-          <span class="card-icon">✨</span>
-          <h3>AI Content Pack</h3>
-          <div class="price-tag">₹7,999</div>
-          <div class="price-note">Per month</div>
-          <ul class="feature-list">
-            <li>4 AI videos / month</li>
-            <li>8 social media posts</li>
-            <li>Scripts & captions</li>
-            <li>4 thumbnails</li>
-            <li>Content calendar</li>
-            <li>Unlimited revisions</li>
-          </ul>
-          <button class="pay-btn" onclick="openRazorpay('AI Content Pack (Monthly)', 799900)">
-            Pay ₹7,999 →
-          </button>
-        </div>
-
-        <!-- Package 5: Full Website -->
-        <div class="card pricing-card fade-up">
-          <span class="card-icon">💻</span>
-          <h3>Full Business Website</h3>
-          <div class="price-tag">₹12,999</div>
-          <div class="price-note">One-time payment</div>
-          <ul class="feature-list">
-            <li>Up to 5 pages</li>
-            <li>Custom dark/light design</li>
-            <li>Contact form</li>
-            <li>Mobile responsive</li>
-            <li>SEO optimized</li>
-            <li>3 revisions</li>
-            <li>Delivery in 7-10 days</li>
-          </ul>
-          <button class="pay-btn" onclick="openRazorpay('Full Business Website', 1299900)">
-            Pay ₹12,999 →
-          </button>
-        </div>
-
-        <!-- Package 6: Bundle -->
-        <div class="card pricing-card fade-up" style="border-color: var(--accent-cyan);">
-          <span class="card-icon">⚡</span>
-          <h3>Video + Website Bundle</h3>
-          <div class="price-tag">₹9,999</div>
-          <div class="price-note">Save ₹3,500 vs. buying separately</div>
-          <ul class="feature-list">
-            <li>2 AI-generated videos</li>
-            <li>1 Landing page</li>
-            <li>Thumbnails included</li>
-            <li>Captions & subtitles</li>
-            <li>WhatsApp CTA</li>
-            <li>3 revisions on each</li>
-          </ul>
-          <button class="pay-btn" onclick="openRazorpay('Video + Website Bundle', 999900)">
-            Pay ₹9,999 →
-          </button>
-        </div>
-
+      <div class="section-header">
+        <span class="section-tag">The Process</span>
+        <h2>How an engagement <span class="gradient-text">works</span></h2>
+        <p>Five stages. You'll know at every point what's happening and what's needed from you.</p>
       </div>
 
-      <!-- Custom Project -->
-      <div class="custom-section fade-up">
-        <div class="card" style="max-width:600px; margin:0 auto; padding:2.5rem; text-align:center; border-color:var(--border-accent);">
-          <span class="card-icon">🎯</span>
-          <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">Need something custom?</h3>
-          <p style="color:var(--text-secondary); margin-bottom:1.5rem;">Have a unique project? Let's talk about it and I'll give you a custom quote.</p>
-          <a href="https://wa.me/919811006425?text=Hi%2C%20I%20need%20a%20custom%20quote%20for%20my%20project" target="_blank" class="btn btn-whatsapp">
-            💬 Get Custom Quote
-          </a>
-        </div>
-      </div>
+      <!-- FILL: confirm these stage timelines against real delivery times before this stays up long.
+           They're written as ranges a first-time client can plan around, not as guarantees. -->
+      <ol class="stage-list">
 
-      <p class="secure-note">
-        🔒 Payments powered by Razorpay — UPI, Cards, Net Banking, Wallets accepted
-      </p>
+        <li class="stage card fade-up">
+          <div class="stage-head">
+            <span class="stage-num">1</span>
+            <h3>Discovery call</h3>
+            <span class="stage-time">30–45 minutes</span>
+          </div>
+          <p>
+            We go through how enquiries reach you today, where they get dropped, and what happens after
+            someone calls. I'm working out whether automation actually helps you — sometimes the honest
+            answer is that a process fix costs nothing and solves it. If it does help, this call is where
+            the scope and the real number come from.
+          </p>
+        </li>
 
+        <li class="stage card fade-up">
+          <div class="stage-head">
+            <span class="stage-num">2</span>
+            <h3>System design</h3>
+            <span class="stage-time">2–3 days</span>
+          </div>
+          <p>
+            I map the whole flow before writing anything: what the agent says, what it asks, when it hands
+            over to a person, where the data lands, and what happens on the days it goes wrong. You see
+            this and sign off on it. Changing a diagram is cheap; changing a live system is not.
+          </p>
+        </li>
+
+        <li class="stage card fade-up">
+          <div class="stage-head">
+            <span class="stage-num">3</span>
+            <h3>Build</h3>
+            <span class="stage-time">1–2 weeks, typically</span>
+          </div>
+          <p>
+            The agent, the automations, and the integrations get built and tested against your real
+            scenarios — including the awkward ones. Timelines stretch when a system has to talk to
+            software that doesn't want to be talked to; if that's your case, you'll hear it in stage one,
+            not halfway through.
+          </p>
+        </li>
+
+        <li class="stage card fade-up">
+          <div class="stage-head">
+            <span class="stage-num">4</span>
+            <h3>Go-live</h3>
+            <span class="stage-time">First week watched closely</span>
+          </div>
+          <p>
+            The system starts handling real conversations while I watch every one of them. Real callers
+            do things no test does, so the first week is about catching those and fixing them fast. Your
+            team gets shown how it works and what to do when they need to step in.
+          </p>
+        </li>
+
+        <li class="stage card fade-up">
+          <div class="stage-head">
+            <span class="stage-num">5</span>
+            <h3>Retainer</h3>
+            <span class="stage-time">Ongoing, monthly</span>
+          </div>
+          <p>
+            The system keeps running and keeps getting tuned. What that covers is below — it's the part
+            most people underestimate, so it's worth reading before you commit to a build.
+          </p>
+        </li>
+
+      </ol>
     </div>
   </section>
+
+  <!-- 2. WHAT A BUILD INCLUDES -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Deliverables</span>
+        <h2>What a build <span class="gradient-text">includes</span></h2>
+        <p>Every engagement, regardless of size.</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <div class="card fade-up">
+          <h3>Integrations</h3>
+          <p>
+            The system connects to what you already use — your CRM or sheets, your calendar, WhatsApp,
+            your phone numbers. If something has no proper API, I'll tell you what that costs in
+            reliability before we build on it.
+          </p>
+        </div>
+
+        <div class="card fade-up">
+          <h3>Testing</h3>
+          <p>
+            Tested against your real scenarios, not a happy path: the caller who interrupts, the one who
+            switches from Hindi to English mid-sentence, the wrong number, the one who wants a human.
+          </p>
+        </div>
+
+        <div class="card fade-up">
+          <h3>Handover</h3>
+          <p>
+            A working session with whoever runs the front desk or the sales floor. They see what the
+            system does, what it won't do, and exactly how to take over a conversation when they need to.
+          </p>
+        </div>
+
+        <div class="card fade-up">
+          <h3>Documentation</h3>
+          <p>
+            Written record of how the system is wired, what each part does, and where the credentials and
+            accounts live — in your possession. If you ever hand this to someone else, they can pick it up.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. WHAT THE RETAINER COVERS -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Ongoing</span>
+        <h2>What the retainer <span class="gradient-text">covers</span></h2>
+        <p>Why a live system needs someone on it — this isn't a maintenance fee for a website that sits still.</p>
+      </div>
+
+      <div class="card fade-up" style="margin-bottom: 1.5rem;">
+        <p style="color: var(--text-secondary);">
+          A voice agent isn't software that gets finished. It talks to real people every day, and real
+          people are unpredictable: they ask things it hasn't been taught, they call about products you
+          launched last month, they phrase things in ways the model reads wrong. Meanwhile the platforms
+          underneath it — the telephony, the WhatsApp API, the model itself — keep changing on their own
+          schedule. A system nobody is watching doesn't stay still, it quietly gets worse. That's what the
+          retainer is actually for.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+
+        <div class="card fade-up">
+          <h3>Monitoring</h3>
+          <p>
+            Calls and conversations get reviewed, not just counted. Failures, dropped calls and handovers
+            that should have happened get caught by me rather than reported by your customer.
+          </p>
+        </div>
+
+        <div class="card fade-up">
+          <h3>Prompt and flow tuning</h3>
+          <p>
+            The agent's script gets corrected against what real callers actually say. This is where most
+            of the improvement after go-live comes from, and it never entirely stops.
+          </p>
+        </div>
+
+        <div class="card fade-up">
+          <h3>Changes as the business changes</h3>
+          <p>
+            New service, new price, new branch, a doctor who's stopped taking Thursday appointments — the
+            system has to be told. Otherwise it confidently tells your customers something false.
+          </p>
+        </div>
+
+        <div class="card fade-up">
+          <h3>Support when something breaks</h3>
+          <p>
+            APIs go down, credentials expire, providers push changes without warning. When that happens
+            you have someone to call who already knows how your system is wired.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PRICE ANCHOR -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="card price-anchor fade-up">
+        <span class="section-tag">What it costs</span>
+        <p class="price-anchor-figure">
+          Systems start at <strong>₹35,000 setup</strong>, plus a monthly retainer scoped to your call volume.
+        </p>
+        <p class="price-anchor-note">
+          That's a starting point, not a fixed price. What a system actually costs depends on how many
+          calls it handles, how many places it has to connect to, and how much of your process it takes
+          over. I'll give you a real number after the discovery call — not before, because anyone quoting
+          you a system before understanding your call flow is guessing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CTA -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="card" style="text-align:center; padding: 3rem 2rem; border-color: var(--border-accent);">
+        <h2 style="font-size:clamp(1.4rem,3vw,2rem); margin-bottom:0.75rem;">Start with the call</h2>
+        <p style="color:var(--text-secondary); margin-bottom:1.75rem; max-width:520px; margin-left:auto; margin-right:auto;">
+          Tell me how enquiries reach you today and where they're getting lost. If automation isn't the
+          answer for you, I'll say so on the call.
+        </p>
+        <!-- FILL: swap in a booking link (Calendly or similar) if you'd rather people self-schedule. -->
+        <a href="https://wa.me/919811006425?text=Hi%2C%20I%27d%20like%20to%20book%20a%20discovery%20call%20about%20an%20AI%20voice%20or%20WhatsApp%20system"
+           target="_blank" class="btn btn-whatsapp btn-lg">
+          💬 Book a discovery call
+        </a>
+        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:1.25rem;">
+          Or <a class="inline-link" href="index.html#demo">have the demo agent call you first</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
 
   <!-- FOOTER -->
   <footer>
@@ -295,6 +291,12 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <!-- Razorpay checkout handler — preserved, not deleted, in case a self-serve entry product
+       ever comes back. Nothing on this page calls openRazorpay() any more, and the checkout.js
+       tag in <head> is commented out too, so this would need both re-enabled to work.
+       Note the key below is a TEST key (rzp_test_…); a live key would need replacing.
+
   <script>
     // ⚠️ REPLACE "YOUR_RAZORPAY_KEY_ID" with your actual Key ID from Razorpay Dashboard
     var RAZORPAY_KEY = "rzp_test_SoRGNmzmpNs5Ev";
@@ -330,5 +332,6 @@
       rzp.open();
     }
   </script>
+  -->
 </body>
 </html>
