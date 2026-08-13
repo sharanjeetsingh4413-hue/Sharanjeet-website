@@ -27,11 +27,12 @@ const DEMO_CONFIG = {
   // FILL: n8n webhook URL that triggers the outbound demo call
   webhookUrl: '',
 
-  // FILL: demo agent phone number in international format, e.g. '+919811006425'
+  // FILL: demo agent phone number in international format, e.g. '+919XXXXXXXXX'.
+  // This is the demo line, not the contact number above — leave empty until it exists.
   phone: '',
 };
 
-const WHATSAPP_URL = 'https://wa.me/919811006425';
+const WHATSAPP_URL = 'https://wa.me/919773860448';
 
 // One callback request per browser session. Cleared when the tab closes.
 const SESSION_KEY = 'demo-callback-requested';
