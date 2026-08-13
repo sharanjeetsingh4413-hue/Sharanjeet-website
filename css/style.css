@@ -652,52 +652,6 @@ section {
 }
 
 /* =============================================
-   STATS BAR
-   ============================================= */
-.stats-section {
-  padding: 0 2rem 5rem;
-  position: relative;
-  z-index: 1;
-}
-
-.stats-bar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.stat-item {
-  background: var(--bg-card);
-  padding: 2rem;
-  text-align: center;
-  transition: var(--transition);
-}
-
-.stat-item:hover {
-  background: var(--bg-card-hover);
-}
-
-.stat-number {
-  font-size: 2.2rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--accent-purple-light), var(--accent-cyan-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-  margin-bottom: 0.4rem;
-}
-
-.stat-label {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-}
-
-/* =============================================
    FOOTER
    ============================================= */
 footer {
